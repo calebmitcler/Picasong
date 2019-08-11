@@ -14,6 +14,8 @@
 		453DCB3922FFD34D00F416B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453DCB3722FFD34D00F416B1 /* LaunchScreen.storyboard */; };
 		453DCB4422FFD34D00F416B1 /* PicasongFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453DCB4322FFD34D00F416B1 /* PicasongFinalTests.swift */; };
 		453DCB4F22FFD34D00F416B1 /* PicasongFinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453DCB4E22FFD34D00F416B1 /* PicasongFinalUITests.swift */; };
+		453DCB5D22FFD74D00F416B1 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453DCB5C22FFD74C00F416B1 /* SpotifyiOS.framework */; };
+		453DCB6323004A2F00F416B1 /* ConnectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453DCB6223004A2F00F416B1 /* ConnectButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		453DCB4A22FFD34D00F416B1 /* PicasongFinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicasongFinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		453DCB4E22FFD34D00F416B1 /* PicasongFinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicasongFinalUITests.swift; sourceTree = "<group>"; };
 		453DCB5022FFD34D00F416B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453DCB5C22FFD74C00F416B1 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		453DCB5E22FFD76100F416B1 /* PicasongFinal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PicasongFinal-Bridging-Header.h"; sourceTree = "<group>"; };
+		453DCB6223004A2F00F416B1 /* ConnectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453DCB5D22FFD74D00F416B1 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 				453DCB4222FFD34D00F416B1 /* PicasongFinalTests */,
 				453DCB4D22FFD34D00F416B1 /* PicasongFinalUITests */,
 				453DCB2C22FFD34B00F416B1 /* Products */,
+				453DCB5C22FFD74C00F416B1 /* SpotifyiOS.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +104,14 @@
 		453DCB2D22FFD34B00F416B1 /* PicasongFinal */ = {
 			isa = PBXGroup;
 			children = (
+				453DCB6223004A2F00F416B1 /* ConnectButton.swift */,
 				453DCB2E22FFD34B00F416B1 /* AppDelegate.swift */,
 				453DCB3022FFD34B00F416B1 /* ViewController.swift */,
 				453DCB3222FFD34C00F416B1 /* Main.storyboard */,
 				453DCB3522FFD34D00F416B1 /* Assets.xcassets */,
 				453DCB3722FFD34D00F416B1 /* LaunchScreen.storyboard */,
 				453DCB3A22FFD34D00F416B1 /* Info.plist */,
+				453DCB5E22FFD76100F416B1 /* PicasongFinal-Bridging-Header.h */,
 			);
 			path = PicasongFinal;
 			sourceTree = "<group>";
@@ -256,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453DCB6323004A2F00F416B1 /* ConnectButton.swift in Sources */,
 				453DCB3122FFD34B00F416B1 /* ViewController.swift in Sources */,
 				453DCB2F22FFD34B00F416B1 /* AppDelegate.swift in Sources */,
 			);
@@ -434,13 +444,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5Y8UBLU74;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PicasongFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = calebmitcler.PicasongFinal;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spotify.sdk.SPTLoginSampleAppAgain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PicasongFinal/PicasongFinal-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,13 +468,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5Y8UBLU74;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PicasongFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = calebmitcler.PicasongFinal;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spotify.sdk.SPTLoginSampleAppAgain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PicasongFinal/PicasongFinal-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
